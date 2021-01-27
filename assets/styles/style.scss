@@ -46,8 +46,14 @@ a {
                 & .info {
                     display: flex;
                     flex-direction: row;
+                    align-items: center;
                     & .status {
                         width: 200px;
+                    }
+                    & .discontinued-notice {
+                        margin-top: 10px;
+                        width: fit-content;
+                        display: block;
                     }
                 }
                 & .help svg {
@@ -160,15 +166,11 @@ a {
 }
 
 .hidden {
-    display: none;
+    display: none !important;
 }
 
 @media only screen and (max-width: 1150px) {
     .container {
         padding: 5vh 10vw;
     }
-}
-
-@media only screen and (max-width: 650px) {
-    
 }

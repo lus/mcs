@@ -63,10 +63,21 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .box .items .item .data .info .status {
   width: 200px;
+}
+
+.box .items .item .data .info .discontinued-notice {
+  margin-top: 10px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  display: block;
 }
 
 .box .items .item .data .help svg {
@@ -208,7 +219,7 @@ a {
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 @media only screen and (max-width: 1150px) {

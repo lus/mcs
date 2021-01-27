@@ -1,5 +1,4 @@
 const states = new Map();
-states.set('blue', 'discontinued');
 states.set('green', 'operational');
 states.set('yellow', 'problematical');
 states.set('red', 'critical');
@@ -25,7 +24,10 @@ function addElement(data) {
             <div class="data">
                 <div class="info">
                     <div class="status"><span class="label ${data.color}">${states.get(data.color)}</span></div>
-                    <span class="url">${data.url}</span>
+                    <div>
+                        <span class="url">${data.url}</span>
+                        <span class="discontinued-notice label blue${discontinuedServices.get(data.url) ? '' : ' hidden'}">discontinued</span>
+                    </div>
                 </div>
                 <div class="help" onclick="document.getElementById('${data.id}').getElementsByClassName('infotext')[0].classList.toggle('hidden');">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a7a7a7" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -51,7 +53,7 @@ function fetchElements() {
                 let status = Object.values(data[index])[0];
                 addElement({
                     id: service,
-                    color: discontinuedServices.get(service) ? "blue" : status,
+                    color: status,
                     url: service,
                     infoText: infoTexts.get(service)
                 })
