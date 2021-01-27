@@ -57,6 +57,9 @@ a {
                     align-items: center;
                     & .status {
                         width: 200px;
+                        & .mobile-label {
+                            display: none;
+                        }
                     }
                     & .discontinued-notice {
                         margin-top: 10px;
@@ -171,6 +174,21 @@ a {
     }
 }
 
+.mobile-label {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    &.green {
+        background-color: rgba(111, 212, 86, 0.5);
+    }
+    &.yellow {
+        background-color: rgba(217, 255, 0, 0.5);
+    }
+    &.red {
+        background-color: rgba(255, 51, 51, 0.5);
+    }
+}
+
 .hidden {
     display: none !important;
 }
@@ -178,5 +196,35 @@ a {
 @media only screen and (max-width: 1150px) {
     .container {
         padding: 5vh 10vw;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .container {
+        padding: 5vh 0;
+    }
+    .head {
+        padding: 0 20px;
+    }
+    .box {
+        padding: 40px 20px;
+        border-radius: 0;
+        & .items .item {
+            margin-top: 40px;
+            & .data {
+                & .status {
+                    width: 50px !important;
+                    & .label {
+                        display: none;
+                    }
+                    & .mobile-label {
+                        display: inline-block !important;
+                    }
+                }
+                & .help {
+                    display: none;
+                }
+            }
+        }
     }
 }

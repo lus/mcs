@@ -85,6 +85,10 @@ a {
   width: 200px;
 }
 
+.box .items .item .data .info .status .mobile-label {
+  display: none;
+}
+
 .box .items .item .data .info .discontinued-notice {
   margin-top: 10px;
   width: -webkit-fit-content;
@@ -229,6 +233,24 @@ a {
   color: #500000;
 }
 
+.mobile-label {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+}
+
+.mobile-label.green {
+  background-color: rgba(111, 212, 86, 0.5);
+}
+
+.mobile-label.yellow {
+  background-color: rgba(217, 255, 0, 0.5);
+}
+
+.mobile-label.red {
+  background-color: rgba(255, 51, 51, 0.5);
+}
+
 .hidden {
   display: none !important;
 }
@@ -236,6 +258,34 @@ a {
 @media only screen and (max-width: 1150px) {
   .container {
     padding: 5vh 10vw;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .container {
+    padding: 5vh 0;
+  }
+  .head {
+    padding: 0 20px;
+  }
+  .box {
+    padding: 40px 20px;
+    border-radius: 0;
+  }
+  .box .items .item {
+    margin-top: 40px;
+  }
+  .box .items .item .data .status {
+    width: 50px !important;
+  }
+  .box .items .item .data .status .label {
+    display: none;
+  }
+  .box .items .item .data .status .mobile-label {
+    display: inline-block !important;
+  }
+  .box .items .item .data .help {
+    display: none;
   }
 }
 /*# sourceMappingURL=style.css.map */

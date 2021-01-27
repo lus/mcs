@@ -23,7 +23,10 @@ function addElement(data) {
         <div id="${data.id}" class="item animate__animated animate__fadeInUp">
             <div class="data">
                 <div class="info">
-                    <div class="status"><span class="label ${data.color}">${states.get(data.color)}</span></div>
+                    <div class="status">
+                        <span class="label ${data.color}">${states.get(data.color)}</span>
+                        <div class="mobile-label ${data.color}"></div>
+                    </div>
                     <div>
                         <span class="url">${data.url}</span>
                         <span class="discontinued-notice label blue${discontinuedServices.get(data.url) ? '' : ' hidden'}">discontinued</span>
@@ -56,7 +59,7 @@ function fetchElements() {
                     color: status,
                     url: service,
                     infoText: infoTexts.get(service)
-                })
+                });
             }
         });
 }
