@@ -95,6 +95,7 @@ a {
 }
 
 .box .items .item .infotext {
+  margin-top: 20px;
   padding: 10px;
   background-color: #cecece;
   color: #616161;
