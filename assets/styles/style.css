@@ -195,8 +195,7 @@ a {
 }
 
 .dark .label.green {
-  color: #005200;
-  background-color: #00c700;
+  color: #003d00;
 }
 
 .label.yellow {
@@ -205,8 +204,7 @@ a {
 }
 
 .dark .label.yellow {
-  color: #5f5f00;
-  background-color: #ffff00;
+  color: #424200;
 }
 
 .label.red {
@@ -215,8 +213,7 @@ a {
 }
 
 .dark .label.red {
-  color: #810000;
-  background-color: #ff4242;
+  color: #500000;
 }
 
 .hidden {
