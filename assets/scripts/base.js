@@ -3,8 +3,7 @@ states.set('green', 'operational');
 states.set('yellow', 'problematical');
 states.set('red', 'critical');
 
-const discontinuedServices = new Map();
-discontinuedServices.set("sessionserver.mojang.com", true);
+const discontinuedServices = ["sessionserver.mojang.com"];
 
 const refreshingSeconds = 60;
 
@@ -29,7 +28,7 @@ function addElement(data) {
                     </div>
                     <div>
                         <span class="url">${data.url}</span>
-                        <span class="discontinued-notice label blue${discontinuedServices.get(data.url) ? '' : ' hidden'}">discontinued</span>
+                        <span class="discontinued-notice label blue${discontinuedServices.includes(data.url) ? '' : ' hidden'}">discontinued</span>
                     </div>
                 </div>
                 <div class="help" onclick="toggleInfoText('${data.id}');">
