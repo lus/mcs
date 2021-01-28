@@ -84,6 +84,7 @@ a {
                 background-color: #cecece;
                 color: #616161;
                 border-radius: 10px;
+                --animate-duration: 250ms;
                 .dark & {
                     background-color: #1a1a1a;
                     color: #c0c0c0;

@@ -32,7 +32,7 @@ function addElement(data) {
                         <span class="discontinued-notice label blue${discontinuedServices.get(data.url) ? '' : ' hidden'}">discontinued</span>
                     </div>
                 </div>
-                <div class="help" onclick="document.getElementById('${data.id}').getElementsByClassName('infotext')[0].classList.toggle('hidden');">
+                <div class="help" onclick="toggleInfoText('${data.id}');">
                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-circle" width="44" height="44" viewBox="0 0 24 24" stroke-width="1.5" stroke="#a7a7a7" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                         <circle cx="12" cy="12" r="9" />
@@ -44,6 +44,27 @@ function addElement(data) {
             <div class="infotext hidden">${data.infoText}</div>
         </div>
     `;
+}
+
+function toggleInfoText(elementID) {
+    let element = document.getElementById(elementID).getElementsByClassName('infotext')[0];
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+        element.classList.add('animate__animated', 'animate__fadeInDown');
+        element.addEventListener('animationend', () => {
+            element.classList.remove('animate__animated', 'animate__fadeInDown');
+        }, {
+            once: true
+        });
+    } else {
+        element.classList.add('animate__animated', 'animate__fadeOutUp');
+        element.addEventListener('animationend', () => {
+            element.classList.add('hidden');
+            element.classList.remove('animate__animated', 'animate__fadeOutUp');
+        }, {
+            once: true
+        });
+    }
 }
 
 function fetchElements() {

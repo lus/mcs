@@ -117,6 +117,7 @@ a {
   background-color: #cecece;
   color: #616161;
   border-radius: 10px;
+  --animate-duration: 250ms;
 }
 
 .dark .box .items .item .infotext {
