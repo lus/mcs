@@ -1,5 +1,5 @@
 if (!localStorage.getItem('dark')) {
-    localStorage.setItem('dark', (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)')).toString());
+    localStorage.setItem('dark', (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches).toString());
 }
 
 initializeDarkMode();
