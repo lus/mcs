@@ -45,7 +45,7 @@ a {
 }
 
 .dark .box {
-  background-color: #313131;
+  background-color: #000000;
 }
 
 .box .items .item {
@@ -120,7 +120,7 @@ a {
 }
 
 .dark .box .items .item .infotext {
-  background-color: #000000;
+  background-color: #1a1a1a;
   color: #c0c0c0;
 }
 
@@ -212,7 +212,7 @@ a {
 }
 
 .dark .label.green {
-  color: #003d00;
+  color: #00c000;
 }
 
 .label.yellow {
@@ -221,7 +221,7 @@ a {
 }
 
 .dark .label.yellow {
-  color: #424200;
+  color: #ffff00;
 }
 
 .label.red {
@@ -230,7 +230,7 @@ a {
 }
 
 .dark .label.red {
-  color: #500000;
+  color: #ff3939;
 }
 
 .mobile-label {
